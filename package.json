@@ -1,5 +1,5 @@
 {
-  "name": "bento-starter",
+  "name": "Engagementkit",
   "version": "1.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -24,10 +24,11 @@
     "firebase": "^6.0.4",
     "is_js": "^0.9.0",
     "lodash": "^4.17.15",
+    "puppeteer": "^1.15.0",
     "pwacompat": "^2.0.9",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
-    "vue-head": "^2.1.1",
+    "vue-head": "^2.2.0",
     "vue-router": "^3.0.6",
     "vuex": "^3.1.1"
   },

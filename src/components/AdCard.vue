@@ -1,21 +1,12 @@
 <template>
-  <div class="product-action-bar">
-    <input
-      placeholder="product name..."
-      class="product-name-input"
-      type="text"
-      :value="productNameToCreate"
-      @input="setProductNameToCreate($event.target.value)"
-      @keypress.enter="triggerAddProductAction"
-    />
-    <div
-      :class="{ disabled: productCreationPending }"
-      class="create-product-btn"
-      @click="triggerAddProductAction"
-    >
-      add product
+  <div class="ad">
+
+    <div class="uk-card uk-card-default">
+        <div class="uk-card-media-top" style="background-image: url(https://i.ytimg.com/vi/J-9l4tsL24A/maxresdefault.jpg)">
+        </div>
     </div>
-  </div>
+
+</div>
 </template>
 
 <script>
@@ -35,11 +26,46 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/theme/variables.scss';
+.ad{
+  height: 500px;
+}
+.uk-card {
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 13px;
+  box-shadow: 0 7px 27px 0 rgba(88,88,88,0.14);
 
+  .uk-card-media-top {
+    background-size: cover;
+    height: 400px;
+    border-radius: 13px;
+    background-position: 50%;
+    }
+
+  .uk-card-body {
+    max-height: 45px;
+    padding: 12px;
+  }
+    h3 {
+      color: #212736;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    p {
+      color: #3e3e3e;
+      margin-top: 3px;
+      font-size: 14px;
+    }
+
+}
 .product-action-bar {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
 
   .product-name-input {
     padding-left: 5px;

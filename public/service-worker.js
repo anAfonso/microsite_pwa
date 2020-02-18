@@ -1,4 +1,4 @@
-workbox.core.setCacheNameDetails({ prefix: 'bento-starter' })
+workbox.core.setCacheNameDetails({ prefix: 'Engagementkit' })
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to

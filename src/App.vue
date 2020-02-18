@@ -39,20 +39,26 @@ export default {
 </script>
 
 <style lang="scss">
-body {
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap');
+
+body, html {
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  background-color: #f4f4f4;
+  padding-bottom: 1em;
 
   a {
     font-weight: 500;
     text-decoration: none;
   }
 
+  h1,h2,h3,h4,h5,p {
+    font-family: "Montserrat", sans-serif !important;
+  }
+
   #app {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 16px;
     color: #2c3e50;
 
     .new-content-available-toastr {
@@ -74,12 +80,13 @@ body {
     }
 
     .main-wrapper {
-      margin-top: 3.6rem;
-      padding: 20px;
+      margin-top: 5rem;
+      padding: 0px;
 
       .page-wrapper {
         width: 60%;
         margin: auto;
+        margin-top: -150px;
 
         @media screen and (max-width: 1000px) {
           width: 100%;
