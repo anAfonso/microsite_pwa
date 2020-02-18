@@ -1,66 +1,44 @@
 <template>
-  <div uk-slider="center: true">
-
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-
-        <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
-            <li>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top" style="background-image: url(https://images.unsplash.com/photo-1562887189-e5d078343de4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80)">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">About our products</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top" style="background-image: url(https://images.unsplash.com/photo-1562887245-138c2f45013e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">About our products</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top" style="background-image: url(https://images.unsplash.com/photo-1562886889-0d7ec2bc333e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1310&q=80" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">About our products</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top" style="background-image: url(https://images.unsplash.com/photo-1562887085-d0aa7ff20b95?ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">About our products</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top" style="background-image: url(https://images.unsplash.com/photo-1562887245-138c2f45013e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">About our products</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-
+  <div>
+    <div uk-toggle="target: #card-1" class="uk-card info uk-card-default">
+        <div class="uk-card-media-top" style="background-image: url(https://images.unsplash.com/photo-1562887189-e5d078343de4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80)">
+        </div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">Learn more about our products</h3>
+            <p>1000 brands - 1 platform</p>
+        </div>
+      </div>
+    <div id="card-1" uk-offcanvas="flip: true; overlay: true">
+      <div class="uk-offcanvas-bar">
+          <div class="uk-card-media-top" style="background-image: url(https://images.unsplash.com/photo-1562887189-e5d078343de4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80)"></div>
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <div class="card-body">
+            <h3>Learn more about our products</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.</p>
+        </div>
+      </div>
     </div>
-
-
-</div>
+  </div>
+  <div>
+    <div uk-toggle="target: #card-2" class="uk-card info uk-card-default">
+        <div class="uk-card-media-top" style="background-image: url(https://images.unsplash.com/photo-1557425493-6f90ae4659fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"></div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">Meet our amazing team</h3>
+            <p>From all over the world</p>
+        </div>
+    </div>
+    <div id="card-2" uk-offcanvas="flip: true; overlay: true">
+      <div class="uk-offcanvas-bar">
+        <div class="uk-card-media-top" style="background-image: url(https://images.unsplash.com/photo-1557425493-6f90ae4659fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"></div>
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <div class="card-body">
+            <h3>Meet our amazing team</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
 </template>
 
 <script>
@@ -80,10 +58,8 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/theme/variables.scss';
-.uk-slider-container {
-  height: 400px;
-}
-.uk-card {
+
+.uk-card.info {
   width: 300px;
   margin: 0 auto;
   border-radius: 13px;
@@ -94,6 +70,7 @@ export default {
     height: 300px;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
+    background-repeat: no-repeat;
     }
 
   .uk-card-body {
@@ -108,47 +85,46 @@ export default {
     }
     p {
       color: #3e3e3e;
-      margin-top: 3px;
+      margin-top: 0px;
       font-size: 14px;
     }
 
 }
-.product-action-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
 
-  .product-name-input {
-    padding-left: 5px;
-    height: 30px;
-    width: 150px;
-    outline: none;
-    font: inherit;
-    border: 1px solid;
-    border-color: #2c3e50;
-    border-radius: 3px;
-  }
+.uk-card.info {
+  margin: 40px auto !important;
+}
 
-  .create-product-btn {
-    cursor: pointer;
-    padding: 5px 10px;
-    border: 1px solid;
-    display: inline-block;
-    border-radius: 3px;
-    margin-left: 10px;
-    border-color: #2c3e50;
+.card-body {
+  padding: 20px 25px;
+}
 
-    &.disabled {
-      pointer-events: none;
-      background-color: #aaa;
+.uk-offcanvas-bar {
+  width: 100vw;
+  left: 100vw;
+  background-color: #fff;
+  color: #000;
+  padding: 0;
+  .uk-card-media-top {
+    background-size: cover;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+
     }
-
-    &:hover {
-      color: $vue-color;
-      border-color: $vue-color;
+    .uk-offcanvas-close {
+      background: #fff;
+      color: #000;
+      border-radius: 50%;
+      padding: 15px;
+      top: 15px;
+      right: 15px;
     }
-  }
+    h3 {
+      color: #000;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 38px;
+    }
 }
 </style>
